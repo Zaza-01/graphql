@@ -95,7 +95,7 @@ export default function Profile() {
   return (
     <div className='profile-grid'>
       <div className='user-info'>
-        <h1 className='font-title mb-4 title' style={{ fontSize: '2.2em' }}>Welcome, {user[0].firstName} {user[0].lastName} 🏋️‍♂️</h1>
+        <h1 className='font-title mb-4 title' style={{ fontSize: '2.2em' }}>Welcome, {user[0].firstName} {user[0].lastName} 🏋🏽</h1>
         <h1 className='font-title' style={{ fontSize: '1.2em' }}>&emsp;Your Email : <span className='font-text2 font-medium'>{user[0].email}</span></h1>
         <p className='font-title' style={{ fontSize: '1.2em' }}>&emsp;Your Username : <span className='font-text2 font-medium'>{user[0].login}</span></p>
         <p className='font-title' style={{ fontSize: '1.2em' }}>&emsp;Your Level : <span className='font-text2 font-medium'>{userLevel[0].level}</span></p>
