@@ -21,8 +21,6 @@ const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
 
   const [selectedEvent, setSelectedEvent] = useState<number | "all">("all");
 
-  // const uniqueEventIds = Array.from(new Set(data.map((user) => user.eventId)));
-
   const filteredData =
     selectedEvent === "all" ? data : data.filter((user) => user.eventId === selectedEvent);
 
@@ -68,7 +66,7 @@ const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
   const series = [{ name: "Users", data: counts }];
 
   return (
-    <div style={{ position: "relative" }}>
+    <div id="barChartContainer" style={{ position: "relative" }}>
       {/* Inline Filter Buttons */}
       <div style={{ position: "absolute", top: 0, right: 0, zIndex: 999 }}>
         <button
@@ -84,6 +82,14 @@ const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
             cursor: "pointer",
             borderRadius: "5px",
             transition: "all 0.3s ease",
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.background = "#555";
+            e.currentTarget.style.color = "#fff";
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.background = selectedEvent === "all" ? "#000" : "#ddd";
+            e.currentTarget.style.color = selectedEvent === "all" ? "#fff" : "#000";
           }}
         >
           All
@@ -101,6 +107,14 @@ const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
             cursor: "pointer",
             transition: "all 0.3s ease",
             borderRadius: "5px",
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.background = "#555";
+            e.currentTarget.style.color = "#fff";
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.background = selectedEvent === userEventId ? "#000" : "#ddd";
+            e.currentTarget.style.color = selectedEvent === userEventId ? "#fff" : "#000";
           }}
         >
           Your Cohort

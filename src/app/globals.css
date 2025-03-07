@@ -7,16 +7,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1b1b1b;
+  --foreground: #ededed;
+  --cards: #222;
+  --formLabel: #9b9b9b;
+  --formFieldBorder: #ffffff;
+  --chartFilterButton: #000;
+  --chartFilterButtonHover: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #1b1b1b;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -35,7 +40,6 @@ body {
   grid-template-columns: 0.8fr 1fr;
   gap: 20px;
   width: 100%;
-  padding: 20px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -52,7 +56,7 @@ body {
 
 .user-info {
   grid-area: user-info;
-  background: #222;
+  background: var(--cards);
   padding: 20px;
   border-radius: 12px;
   display: flex;
@@ -62,7 +66,7 @@ body {
 
 .test-game-result {
   grid-area: test-game-result;
-  background: #222;
+  background: var(--cards);
   padding: 20px;
   border-radius: 12px;
   display: flex;
@@ -72,7 +76,7 @@ body {
 
 .audit-ratio {
   grid-area: audit-ratio;
-  background: #222;
+  background: var(--cards);
   padding: 20px;
   border-radius: 12px;
   display: flex;
@@ -86,14 +90,14 @@ body {
 
 .bar-chart {
   grid-area: bar-chart;
-  background: #222;
+  background: var(--cards);
   padding: 20px;
   border-radius: 12px;
 }
 
 .xp-line-chart {
   grid-area: xp-line-chart;
-  background: #222;
+  background: var(--cards);
   padding: 20px;
   border-radius: 12px;
 }
@@ -146,7 +150,7 @@ body {
   letter-spacing: 0.7px;
   width: 18em;
   border: 0;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid var(--formFieldBorder);
   outline: 0;
   font-size: 1em;
   color: #fff;
@@ -173,7 +177,7 @@ body {
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: #9b9b9b;
+  color: var(--formLabel);
   @apply font-text;
   letter-spacing: 0.7px;
 }
@@ -191,21 +195,11 @@ body {
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: #9b9b9b;
+  color: var(--formLabel);
 }
 
 /* Reset input */
 .form__field:required,
 .form__field:invalid {
   box-shadow: none;
-}
-
-#yourCohortButtonFilter:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-#allButtonFilter:hover {
-  background-color: #000;
-  color: #fff;
 }

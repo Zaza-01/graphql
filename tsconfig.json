@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/barchart.js", "src/components/PassFailChart.tsx", "src/components/linechart.js", "src/components/XPLineChart.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/barchart.js", "src/components/PassFailChart.tsx", "src/components/linechart.js", "src/components/XPLineChart.tsx", "src/app/logout/page.js"],
   "exclude": ["node_modules"]
 }

@@ -43,7 +43,6 @@ export default function Login() {
       <div className='flex flex-col items-center bg-[#00000057] p-[4em] rounded-3xl'>
         <div className='flex flex-col items-center gap-7 mb-8'>
           <h1 className='font-title text-[4em]'>WELCOME TO GRAPHQL</h1>
-          {/* <h1 className='font-title text-[3em]'>PLEASE ENTER YOUR CREDENTIALS</h1> */}
         </div>
         <form onSubmit={handleLogin} className='flex flex-col gap-5 items-center'>
           <div className="form__group">
