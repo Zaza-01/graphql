@@ -40,7 +40,7 @@ export default function Login() {
 
   return (
     <div className='flex flex-col h-[100vh] w-[100%] justify-center items-center hen'>
-      <div className='flex flex-col items-center bg-[#00000057] p-[4em] rounded-3xl'>
+      <div className=' form-container flex flex-col items-center p-[4em] rounded-3xl'>
         <div className='flex flex-col items-center gap-7 mb-8'>
           <h1 className='font-title text-[4em]'>WELCOME TO GRAPHQL</h1>
         </div>

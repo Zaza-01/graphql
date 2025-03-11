@@ -12,9 +12,16 @@
   --cards: #222;
   --formLabel: #9b9b9b;
   --formFieldBorder: #ffffff;
-  --chartFilterButton: #000;
-  --chartFilterButtonHover: #fff;
 }
+
+/* 
+  --background: #aea5d1;
+  --foreground: #AEA5D1;
+  --cards: #222;
+  --formLabel: #1e1b1332;
+  --formFieldBorder: #AEA5D1;
+  --form-background: #d4bbd1;
+*/
 
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -24,9 +31,16 @@
 } */
 
 body {
+  margin:0;
+  padding:0;
+  height: auto;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-grid-container {
+  @apply flex flex-col justify-center items-center h-[100vh] w-[100%]
 }
 
 .profile-grid {
@@ -38,7 +52,8 @@ body {
     "test-game-result xp-line-chart"
     "audit-ratio xp-line-chart";
   grid-template-columns: 0.8fr 1fr;
-  gap: 20px;
+  transform: scale(0.95);
+  gap: 15px;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -51,7 +66,7 @@ body {
   gap: 30px;
   padding: 10px;
   padding-bottom: 0;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .user-info {
@@ -64,6 +79,16 @@ body {
   justify-content: center;
 }
 
+.user-info h1 {
+  font-size: 2.1em;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+}
+
+.user-info p {
+  font-size: 1.2em;
+}
+
 .test-game-result {
   grid-area: test-game-result;
   background: var(--cards);
@@ -72,6 +97,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.toad-subtopic {
+  font-size: 1.4em;
 }
 
 .audit-ratio {
@@ -86,6 +115,7 @@ body {
 
 .title {
   margin-left: 0.5em;
+  font-size: 1.8em;
 }
 
 .bar-chart {
@@ -136,6 +166,10 @@ body {
     left: 120%;
     transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   }
+}
+
+.form-container {
+  background-color: #00000057;
 }
 
 .form__group {
@@ -202,4 +236,159 @@ body {
 .form__field:required,
 .form__field:invalid {
   box-shadow: none;
+}
+
+@media(max-width: 1024px) {
+  .profile-grid {
+    grid-template-areas:
+      "user-info test-game-result"
+      /* "test-game-result" */
+      "bar-chart bar-chart"
+      "xp-line-chart xp-line-chart"
+      "audit-ratio audit-ratio";
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .game-result {
+    margin-top: 40px;
+  }
+
+  .profile-grid-container {
+    height: auto;
+  }
+
+  .user-info h1 {
+    font-size: 1.8em;
+  }
+
+  .user-info p {
+    font-size: 1em;
+  }
+}
+
+@media(max-width: 844px) {
+  .user-info h1 {
+    font-size: 1.6em;
+  }
+
+  .user-info p {
+    font-size: 1em;
+  }
+
+  .user-info span {
+    font-size: 0.9em;
+  }
+
+  .game-result {
+    margin-top: 40px;
+  }
+}
+
+@media(max-width: 794px) {
+  .test-game-result p {
+    font-size: 0.8em;
+  } 
+  .user-info h1 {
+    font-size: 1.5em;
+  }
+
+  .user-info p {
+    font-size: 1em;
+  }
+
+  .user-info span {
+    font-size: 0.9em;
+  }
+}
+
+@media(max-width: 748px) {
+  .test-game-result p {
+    font-size: 0.8em;
+  } 
+  .user-info p {
+    font-size: 1em;
+  }
+
+  .user-info span {
+    font-size: 0.8em;
+  }
+}
+
+
+@media (max-width: 716px) {
+  .user-info h1 {
+    font-size: 1.4em;
+  }
+
+  .user-info p {
+    font-size: 0.9em;
+  }
+
+  .user-info span {
+    font-size: 0.8em;
+  }
+
+  .game-result {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 674px) {
+  .user-info h1 {
+    font-size: 1.4em;
+  }
+
+  .user-info p {
+    font-size: 0.9em;
+  }
+
+  .user-info span {
+    font-size: 0.8em;
+  }
+
+  .game-result {
+    margin-top: 2.3em;
+  }
+
+  .memoryGame h2 {
+    font-size: 1em;
+  }
+  .memoryGame p {
+    font-size: 0.7em;
+  }
+
+  .zzleGame h2 {
+    font-size: 1em;
+  }
+  .zzleGame p {
+    font-size: 0.7em;
+  }
+  
+}
+
+@media (max-width: 638px) {
+  .profile-grid {
+    grid-template-areas:
+      "user-info"
+      "test-game-result"
+      "bar-chart"
+      "xp-line-chart"
+      "audit-ratio";
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .user-info {
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .user-info h1 {
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+  
 }

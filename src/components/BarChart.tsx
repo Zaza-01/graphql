@@ -38,25 +38,45 @@ const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
         show: false,
       }
     },
-    xaxis: { categories: levels, axisTicks:{show:false}, title: { text: "User Level", style: {
-      color: "#fff"
-    }}, labels:{show: false}},
-    yaxis: { axisTicks:{show:false}, title: { text: "Number of Users", style: {
-      color: "#fff"
-    }}, labels: {show: false} },
+    xaxis: {
+      categories: levels,
+      axisTicks: { show: false },
+      title: {
+        text: "User Level",
+        style: {
+          color: "#fff",
+          fontWeight: 600,
+          fontFamily: "sans-serif",
+        }
+      },
+      labels: { show: false }
+    },
+    yaxis: {
+      axisTicks: {
+        show: false
+      },
+      title: {
+        text: "Number of Users", style: {
+          color: "#fff",
+          fontFamily: "sans-serif",
+          fontWeight: 600,
+        }
+      }, 
+      labels: { show: false }
+    },
     colors: ["#fff"],
-    plotOptions: { 
-      bar: { 
-        columnWidth: "50%", 
-        borderRadius: 4 
-      } 
+    plotOptions: {
+      bar: {
+        columnWidth: "50%",
+        borderRadius: 4
+      }
     },
     tooltip: {
       theme: "dark",
       style: { fontSize: "14px" },
     },
-    grid: { 
-      show: false, 
+    grid: {
+      show: false,
     },
     dataLabels: {
       enabled: false,
