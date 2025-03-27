@@ -11,6 +11,7 @@ export default {
   	extend: {
   		fontFamily: {
   			title: [
+				'Megrim',
   				'Bebas Neue',
   				'sans-serif'
   			],
@@ -21,7 +22,7 @@ export default {
   			text2: [
   				'Wix Madefor Text',
   				'sans-serif'
-  			]
+			]
   		},
   		colors: {
   			background: 'hsl(var(--background))',

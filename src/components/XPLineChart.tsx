@@ -82,7 +82,7 @@ export const XPLineChart: React.FC<XPChartProps> = ({ data }) => {
       height: 350,
       toolbar: { show: false },
       zoom: { enabled: false },
-      background: "#222", //chart background color
+      background: "#151b22", //chart background color
     },
     xaxis: {
       type: "datetime",
@@ -135,7 +135,7 @@ export const XPLineChart: React.FC<XPChartProps> = ({ data }) => {
   };
 
   return (
-    <div id="XPLineChartContainer" style={{ backgroundColor: "#222", borderRadius: "8px", width: "100%" }}>
+    <div id="XPLineChartContainer" style={{ backgroundColor: "#151b22", borderRadius: "8px", width: "100%" }}>
       {chartSeries.length > 0 ? (
         <ApexCharts 
           options={options} 

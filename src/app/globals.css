@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Silkscreen:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Silkscreen:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Silkscreen:wght@400;700&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Megrim&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Silkscreen:wght@400;700&family=Tektur:wght@400..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #1b1b1b;
+  --background: #0f1319;
   --foreground: #ededed;
-  --cards: #222;
+  --cards: #151b22;
   --formLabel: #9b9b9b;
-  --formFieldBorder: #ffffff;
+  --formFieldBorder: #46b4ae;
+  --formContainerBack: black;
 }
 
 /* 
@@ -40,7 +42,11 @@ body {
 }
 
 .profile-grid-container {
-  @apply flex flex-col justify-center items-center h-[100vh] w-[100%]
+  @apply flex flex-col justify-center items-center h-[100vh] w-[100%];
+  /* background: url(../../public/images/724282.jpg); */
+  /* background-size: cover; */
+  /* background-position: center; */
+
 }
 
 .profile-grid {
@@ -57,6 +63,11 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.card {
+  background: var(--cards);
+  box-shadow: rgba(102, 252, 241, 0.15) 0px 0px 20px 15px;
 }
 
 .game-result {
@@ -99,8 +110,12 @@ body {
   justify-content: center;
 }
 
+.test-game-result p {
+  font-size: 0.9em;
+}
+
 .toad-subtopic {
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .audit-ratio {
@@ -116,6 +131,7 @@ body {
 .title {
   margin-left: 0.5em;
   font-size: 1.8em;
+  color: #46b4ae;
 }
 
 .bar-chart {
@@ -133,11 +149,11 @@ body {
 }
 
 .btn {
-  border: 1px solid;
+  /* border: 2px solid #46b4ae; */
   overflow: hidden;
   position: relative;
   @apply py-3 px-[3em] rounded-full;
-  box-shadow: 0.3em 0.3em 0.6em 0.1em rgba(255, 255, 255, 0.2);
+  box-shadow: 0.2em 0.5em 0.7em 0.1em rgba(102, 252, 241, 0.3);
 
   span {
     z-index: 20;
@@ -158,6 +174,12 @@ body {
   }
 }
 
+.form-title {
+  @apply font-title text-[3em];
+  color: rgb(102, 252, 241);
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(102, 252, 241), 0 0 5px black;
+}
+
 .btn:hover {
   transform: translateY(-0.2em);
   transition: linear 0.1s;
@@ -169,7 +191,10 @@ body {
 }
 
 .form-container {
-  background-color: #00000057;
+  background-color: var(--formContainerBack);
+  /* border: rgb(102, 252, 241) 2px solid; */
+  /* box-shadow: rgba(102, 252, 241, 0.56) 0px 30px 80px 0px; */
+  box-shadow: rgba(102, 252, 241, 0.45) 0px 7px 70px;
 }
 
 .form__group {
@@ -219,7 +244,7 @@ body {
 .form__field:focus {
   padding-bottom: 6px;
   border-width: 3px;
-  border-image: linear-gradient(to right, #ffffff);
+  border-image: linear-gradient(to right, var(--formFieldBorder));
   border-image-slice: 1;
 }
 

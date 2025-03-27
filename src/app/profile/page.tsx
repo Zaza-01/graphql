@@ -84,23 +84,23 @@ export default function Profile() {
           <span className='font-title font-medium text-white'>Logout</span>
         </button> */}
       <div className='profile-grid'>
-        <div className='user-info'>
-          <h1 className='font-title'>Welcome, {user[0].firstName} {user[0].lastName} 🏋🏽</h1>
+        <div className='user-info card'>
+          <h1 className='font-title title' style={{fontSize:'2.1em'}}>Welcome, {user[0].firstName} {user[0].lastName} 🏋🏽</h1>
           <div className="info">
             <p className='font-title'>&emsp;Your Email : <span className='font-text2 font-medium'>{user[0].email}</span></p>
             <p className='font-title'>&emsp;Your Username : <span className='font-text2 font-medium'>{user[0].login}</span></p>
             <p className='font-title'>&emsp;Your Level : <span className='font-text2 font-medium'>{userLevel[0].level}</span></p>
           </div>
         </div>
-        <div className='audit-ratio'>
+        <div className='audit-ratio card'>
           <h2 className='font-title title'>Audit Ratio</h2>
           <AuditRatioBarChart data={user[0]} />
         </div>
-        <div className='bar-chart'>
+        <div className='bar-chart card'>
           <h2 className='font-title title'>Distribution By Level</h2>
           <BarChart data={event_user} userEventId={user[0].groupsByCaptainid[user[0].groupsByCaptainid.length - 1].eventId} />
         </div>
-        <div className='xp-line-chart'>
+        <div className='xp-line-chart card'>
           <h2 className='mb-3 font-title title'>XP Progression</h2>
           <XPLineChart data={user[0].TransactionsFiltered1} />
         </div>

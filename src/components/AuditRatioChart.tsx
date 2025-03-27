@@ -48,7 +48,7 @@ export const AuditRatioBarChart: React.FC<ChartProps> = ({ data }) => {
       categories: ["Done", "Received"],
       labels: {
         style: {
-          colors: "#fff"
+          colors: "#fff",
         },
         show: false
       },
@@ -59,7 +59,8 @@ export const AuditRatioBarChart: React.FC<ChartProps> = ({ data }) => {
     yaxis: {
       labels: {
         style: {
-          colors: "#fff"
+          colors: "#fff",
+          fontSize: "1em",
         },
         // show: false
       }

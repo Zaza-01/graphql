@@ -37,7 +37,7 @@ export const ToadGame: React.FC<ToadResultProps> = ({ toad_session_game_results 
         , zzleGameResults[0]);
 
     return (
-        <div className="test-game-result font-text2 relative">
+        <div className="test-game-result font-text2 relative card">
             <h1 className='font-title title absolute top-[20px]'>Toad Game Results</h1>
             <div className="game-result">
                 <div className="memoryGame">
