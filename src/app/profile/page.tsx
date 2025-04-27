@@ -85,7 +85,7 @@ export default function Profile() {
         </button> */}
       <div className='profile-grid'>
         <div className='user-info card'>
-          <h1 className='font-title title' style={{fontSize:'2.1em'}}>Welcome, {user[0].firstName} {user[0].lastName} 🏋🏽</h1>
+          <h1 className='font-title title'>Welcome, {user[0].firstName} {user[0].lastName} 🏋🏽</h1>
           <div className="info">
             <p className='font-title'>&emsp;Your Email : <span className='font-text2 font-medium'>{user[0].email}</span></p>
             <p className='font-title'>&emsp;Your Username : <span className='font-text2 font-medium'>{user[0].login}</span></p>
