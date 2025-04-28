@@ -315,7 +315,7 @@ body {
     font-size: 0.8em;
   } 
   .user-info h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 
   .user-info p {
@@ -347,7 +347,7 @@ body {
   }
 
   .user-info p {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .user-info span {
@@ -359,13 +359,13 @@ body {
   }
 }
 
-@media (max-width: 674px) {
+@media (max-width: 675px) {
   .user-info h1 {
     font-size: 1.4em;
   }
 
   .user-info p {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .user-info span {
