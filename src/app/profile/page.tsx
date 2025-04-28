@@ -54,6 +54,13 @@ const USER_QUERY = gql`
   }
 `;
 
+type EventUser = {
+  level: number;
+  userId: string;
+  userLogin: string;
+  eventId: number;
+};
+
 export default function Profile() {
   const { loading, error, data } = useQuery(USER_QUERY, { client });
 
@@ -62,7 +69,7 @@ export default function Profile() {
 
   const { user, event_user, toad_session_game_results } = data;
 
-  const userLevel = event_user.filter((eventUser: any) => eventUser.userId === user[0].groupsByCaptainid[0].captainId);
+  const userLevel = event_user.filter((eventUser: EventUser) => eventUser.userId === user[0].groupsByCaptainid[0].captainId);
 
 
   const logout = () => {
