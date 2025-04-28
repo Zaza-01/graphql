@@ -263,6 +263,22 @@ body {
   box-shadow: none;
 }
 
+.logoutIcon {
+  background: #0f1319;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  cursor: pointer;
+}
+
+.logoutIcon:hover {
+  background: #010202;
+  transition: all 0.3s ease-in-out;
+}
+
 @media(max-width: 1024px) {
   .profile-grid {
     grid-template-areas:
