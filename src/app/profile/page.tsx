@@ -62,7 +62,7 @@ export default function Profile() {
 
   const { user, event_user, toad_session_game_results } = data;
 
-  let userLevel = event_user.filter((eventUser: any) => eventUser.userId === user[0].groupsByCaptainid[0].captainId);
+  const userLevel = event_user.filter((eventUser: any) => eventUser.userId === user[0].groupsByCaptainid[0].captainId);
 
 
   const logout = () => {

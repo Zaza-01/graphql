@@ -1,8 +1,5 @@
 'use client';
 
-import React, { useState } from "react";
-
-
 interface Game {
     level: number;
     result: {
