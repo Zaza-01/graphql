@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
-// import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Login() {
   const [credentials, setCredentials] = useState({ username: '', password: '' });
   const [error, setError] = useState('');
-  // const router = useRouter();
+  const router = useRouter();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,7 +26,7 @@ export default function Login() {
 
         if (data) {
           localStorage.setItem('token', data);
-          window.location.href = '/profile'
+          router.replace('/profile');
         } else {
           setError('No token received');
         }
@@ -39,7 +39,7 @@ export default function Login() {
   };
 
   return (
-  <div className='loginPage flex flex-col h-[100vh] w-[100%] justify-center items-center'>
+    <div className='loginPage flex flex-col h-[100vh] w-[100%] justify-center items-center'>
       <div className=' form-container flex flex-col items-center p-[4em] rounded-3xl'>
         <div className='flex flex-col items-center gap-7 mb-8'>
           <h1 className='form-title'>WELCOME TO GRAPHQL</h1>
