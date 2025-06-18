@@ -18,7 +18,6 @@ interface BarChartProps {
 const ApexCharts = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
-
   const [selectedEvent, setSelectedEvent] = useState<number | "all">("all");
 
   const filteredData =

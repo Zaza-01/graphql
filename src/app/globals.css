@@ -275,13 +275,11 @@ body {
   align-self: start;
   width: 45px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .logoutIcon:hover {
-  background: #151b22;
-  transition: all 0.3s ease-in-out;
-
-
+  background: #46b4af7a;
 }
 
 .loadingContainer {
@@ -444,6 +442,15 @@ body {
     flex-direction: row-reverse;
   }
 
+  .form-container {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+
+  .form-title {
+    font-size: 2.5em;
+  }
+
   .user-info {
     flex-direction: row;
     justify-content: space-evenly;
@@ -456,4 +463,25 @@ body {
     margin-left: 0px;
   }
   
+}
+
+@media (max-width:490px) {
+  .form-container {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .form-title {
+    font-size: 1.6em;
+    /* margin-right: 1em;
+    margin-left: 1em; */
+  }
+
+  .form__field {
+
+  }
+
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 0.9em;
+  }
 }

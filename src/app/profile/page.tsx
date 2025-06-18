@@ -50,7 +50,7 @@ const USER_QUERY = gql`
         createdAt
       }
     }
-    event_user(where: { eventId: { _in: [72, 20, 250] } }) {
+    event_user(where: { eventId: { _in: [72, 20, 250, 763] }}) {
       level
       userId
       userLogin
@@ -91,6 +91,9 @@ export default function Profile() {
   if (error) return <Error message={error.message} />;
 
   const { user, event_user, toad_session_game_results } = data;
+
+  console.log(event_user);
+  
 
   const userLevel = event_user.filter((eventUser: EventUser) =>
     eventUser.userId === user[0].groupsByCaptainid[0].captainId
