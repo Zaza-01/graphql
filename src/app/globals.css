@@ -472,13 +472,9 @@ body {
   }
 
   .form-title {
-    font-size: 1.6em;
-    /* margin-right: 1em;
-    margin-left: 1em; */
-  }
-
-  .form__field {
-
+    font-size: 1.7em;
+    margin-right: 0.8em;
+    margin-left: 0.8em;
   }
 
   .form__field:placeholder-shown ~ .form__label {
