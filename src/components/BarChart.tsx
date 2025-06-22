@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import dynamic from "next/dynamic";
 
 interface EventUser {
@@ -18,6 +18,10 @@ interface BarChartProps {
 const ApexCharts = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
+
+  console.log(userEventId);
+  
+
   const [selectedEvent, setSelectedEvent] = useState<number | "all">("all");
 
   const filteredData =

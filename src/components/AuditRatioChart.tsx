@@ -22,22 +22,29 @@ interface ChartProps {
 export const AuditRatioBarChart: React.FC<ChartProps> = ({ data }) => {
   const { totalUp, totalDown, auditRatio } = data;
 
+  // Helper to format bytes
+  function formatBytes(bytes: number) {
+    if (bytes === 0) return '0 B';
+    const k = 1000;
+    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+
   // Round audit ratio to one decimal place
   const roundedRatio = Math.round(auditRatio * 10) / 10;
 
   // Correctly typed ApexCharts options
   const options: ApexOptions = {
     chart: {
-      type: "bar", // Explicitly use 'bar' as the type
+      type: "bar",
       height: 350,
-      toolbar: {
-        show: false,
-      }
+      toolbar: { show: false },
     },
     plotOptions: {
       bar: {
         borderRadius: 4,
-        horizontal: true, // Changed to false for vertical bars
+        horizontal: true,
       },
     },
     dataLabels: {
@@ -47,14 +54,10 @@ export const AuditRatioBarChart: React.FC<ChartProps> = ({ data }) => {
     xaxis: {
       categories: ["Done", "Received"],
       labels: {
-        style: {
-          colors: "#fff",
-        },
-        show: false
+        style: { colors: "#fff" },
+        show: false,
       },
-      axisTicks: {
-        show: false
-      }
+      axisTicks: { show: false },
     },
     yaxis: {
       labels: {
@@ -62,12 +65,14 @@ export const AuditRatioBarChart: React.FC<ChartProps> = ({ data }) => {
           colors: "#fff",
           fontSize: "1em",
         },
-        // show: false
-      }
+      },
     },
     tooltip: {
       theme: "dark",
       style: { fontSize: "14px" },
+      y: {
+        formatter: (val: number) => formatBytes(val),
+      },
     },
   };
 
