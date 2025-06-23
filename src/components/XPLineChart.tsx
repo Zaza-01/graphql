@@ -141,8 +141,7 @@ export const XPLineChart: React.FC<XPChartProps> = ({ data }) => {
           options={options} 
           series={[{ name: "Cumulative XP", data: chartSeries }]} 
           type="line" 
-          height={350} 
-          width="100%"
+          height={350}
         />
       ) : (
         <p style={{ color: "#fff", textAlign: "center" }}>Loading XP data...</p>

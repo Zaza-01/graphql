@@ -86,8 +86,8 @@ export const AuditRatioBarChart: React.FC<ChartProps> = ({ data }) => {
   return (
     <div id="AuditChartContainer">
       <div className="flex flex-col justify-center items-center" style={{ textAlign: "center", marginTop: "10px", fontSize: "16px" }}>
-        <ApexCharts options={options} series={series} type="bar" height={200} width={500} />
-        <p className="font-title" style={{ fontSize: '1.3em' }}>Audit Ratio: {roundedRatio}</p>
+        <ApexCharts options={options} series={series} type="bar" />
+        <p className="font-title">Audit Ratio: {roundedRatio}</p>
       </div>
     </div>
   );
