@@ -24,7 +24,6 @@ const USER_QUERY = gql`
       totalDown
       totalUp
       groupsByCaptainid {
-        campus
         captainId
         captainLogin
         createdAt
