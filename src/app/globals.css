@@ -441,6 +441,35 @@ body {
     gap: 10px;
   }
 
+  .user-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .info p {
+    font-size: 0.6em;
+  }
+
+
+  .user-info h1 {
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-size: 1.1em;
+  }
+
+  .logoutIcon {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+  }
+
   .title {
     font-size: 1.2em;
     margin-left: 0.2em;
@@ -468,18 +497,6 @@ body {
 
   .form-title {
     font-size: 2.5em;
-  }
-
-  .user-info {
-    flex-direction: row;
-    justify-content: space-evenly;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .user-info h1 {
-    margin-bottom: 0px;
-    margin-left: 0px;
   }
 
 }
