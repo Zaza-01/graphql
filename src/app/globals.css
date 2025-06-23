@@ -447,16 +447,28 @@ body {
     gap: 20px;
   }
 
+  .game-result {
+    flex-wrap: wrap;
+  }
+
+  .memoryGame h2, .zzleGame h2 {
+    font-size: 0.8em;
+  }
+  
+  .memoryGame p, .zzleGame p {
+    font-size: 0.6em;
+  }
+
   .info {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .info p {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
-
 
   .user-info h1 {
     margin-bottom: 0px;

@@ -25,6 +25,9 @@ export const ToadGame: React.FC<ToadResultProps> = ({ toad_session_game_results 
         game.attempts > max.attempts ? game : max
         , memoryGameResults[0]);
 
+    console.log(highestMemoryAttemps.attempts);
+    
+
     const highestZzleAttemps = zzleGameResults.reduce((max: Game, game: Game) =>
         game.attempts > max.attempts ? game : max
         , zzleGameResults[0]);
@@ -41,13 +44,13 @@ export const ToadGame: React.FC<ToadResultProps> = ({ toad_session_game_results 
                     <h2 className='font-title toad-subtitle'>Memory Game</h2>
                     <p>&emsp;Highest Level: {highestMemoryLevel.level}</p>
                     <p>&emsp;Highest Attempts:</p>
-                    <p>&emsp;Level: {highestMemoryAttemps.level} | Attempts: {highestMemoryAttemps.attempts}</p>
+                    <p>&emsp;&emsp;Level: {highestMemoryAttemps.level} | Attempts: {highestMemoryAttemps.attempts}</p>
                 </div>
                 <div className="zzleGame">
                     <h2 className='font-title toad-subtitle'>Zzle Game:</h2>
                     <p>&emsp;Highest Level: {highestZzleLevel.level}</p>
                     <p>&emsp;Highest Attempts:</p>
-                    <p>&emsp;Level: {highestZzleAttemps.level} | Attempts: {highestZzleAttemps.attempts}</p>
+                    <p>&emsp;&emsp;Level: {highestZzleAttemps.level} | Attempts: {highestZzleAttemps.attempts}</p>
                 </div>
             </div>
         </div>
