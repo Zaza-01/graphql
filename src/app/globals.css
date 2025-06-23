@@ -196,8 +196,6 @@ body {
 
 .form-container {
   background-color: var(--formContainerBack);
-  /* border: rgb(102, 252, 241) 2px solid; */
-  /* box-shadow: rgba(102, 252, 241, 0.56) 0px 30px 80px 0px; */
   box-shadow: rgba(102, 252, 241, 0.45) 0px 7px 70px;
 }
 
