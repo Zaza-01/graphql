@@ -48,7 +48,12 @@ export const AuditRatioBarChart: React.FC<ChartProps> = ({ data }) => {
       },
     },
     dataLabels: {
-      enabled: false,
+      enabled: true,
+      formatter: (val: number) => formatBytes(val),
+      style: {
+        colors: ["#272e38"],
+        fontSize: "14px",
+      },
     },
     colors: ['#fff'],
     xaxis: {
@@ -68,27 +73,23 @@ export const AuditRatioBarChart: React.FC<ChartProps> = ({ data }) => {
       },
     },
     tooltip: {
-      theme: "dark",
-      style: { fontSize: "14px" },
-      y: {
-        formatter: (val: number) => formatBytes(val),
-      },
-    },
-  };
+      enabled: false,
+  },
+};
 
-  const series = [
-    {
-      name: "Audit Counts",
-      data: [totalUp, totalDown],
-    },
-  ];
+const series = [
+  {
+    name: "Audit Counts",
+    data: [totalUp, totalDown],
+  },
+];
 
-  return (
-    <div id="AuditChartContainer">
-      <div className="flex flex-col justify-center items-center" style={{ textAlign: "center", marginTop: "10px", fontSize: "16px" }}>
-        <ApexCharts options={options} series={series} type="bar" />
-        <p className="font-title">Audit Ratio: {roundedRatio}</p>
-      </div>
+return (
+  <div id="AuditChartContainer">
+    <div className="flex flex-col justify-center items-center" style={{ textAlign: "center", marginTop: "10px", fontSize: "16px" }}>
+      <ApexCharts options={options} series={series} type="bar" className="w-[80%]" height={200} />
+      <p className="font-title">Audit Ratio: {roundedRatio}</p>
     </div>
-  );
+  </div>
+);
 };

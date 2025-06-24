@@ -97,8 +97,8 @@ const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
           id="allButtonFilter"
           type="button"
           style={{
-            background: selectedEvent === "all" ? "#272e38" : "#ddd",
-            color: selectedEvent === "all" ? "#fff" : "#000",
+            background: selectedEvent === "all" ? "#ddd" : "#272e38" ,
+            color: selectedEvent === "all" ? "#000" : "#fff",
             padding: "5px 10px",
             margin: "2px",
             border: "none",
@@ -107,12 +107,12 @@ const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
             transition: "all 0.3s ease",
           }}
           onMouseOver={(e) => {
-            e.currentTarget.style.background = "#272e38";
-            e.currentTarget.style.color = "#fff";
+            e.currentTarget.style.background = "#ddd";
+            e.currentTarget.style.color = "#272e38";
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.background = selectedEvent === "all" ? "#272e38" : "#ddd";
-            e.currentTarget.style.color = selectedEvent === "all" ? "#fff" : "#000";
+            e.currentTarget.style.background = selectedEvent === "all" ? "#ddd" : "#272e38" ;
+            e.currentTarget.style.color = selectedEvent === "all" ? "#000" : "#fff"  ;
           }}
         >
           All
@@ -122,8 +122,8 @@ const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
           className="yourCohortButtonFilter"
           type="button"
           style={{
-            background: selectedEvent === userEventId ? "#272e38" : "#ddd",
-            color: selectedEvent === userEventId ? "#fff" : "#000",
+            background: selectedEvent === userEventId ? "#ddd" : "#272e38",
+            color: selectedEvent === userEventId ? "#000" : "#fff" ,
             padding: "5px 10px",
             margin: "2px",
             border: "none",
@@ -132,12 +132,12 @@ const BarChart: React.FC<BarChartProps> = ({ data, userEventId }) => {
             borderRadius: "5px",
           }}
           onMouseOver={(e) => {
-            e.currentTarget.style.background = "#272e38";
-            e.currentTarget.style.color = "#fff";
+            e.currentTarget.style.background = "#ddd";
+            e.currentTarget.style.color = "#272e38";
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.background = selectedEvent === userEventId ? "#272e38" : "#ddd";
-            e.currentTarget.style.color = selectedEvent === userEventId ? "#fff" : "#000";
+            e.currentTarget.style.background = selectedEvent === userEventId ? "#ddd" : "#272e38" ;
+            e.currentTarget.style.color = selectedEvent === userEventId ? "#000" : "#fff"  ;
           }}
         >
           Your Cohort
